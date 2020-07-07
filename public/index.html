@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gsap July Page</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <h1>Light The World</h1>
+    <button id="cta">Watch Here</button>
+    <div class="panel">
+        <img src="imgs/light.svg" class="img" alt="Light">
+        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ipsum</p>
+        <div class="box"></div>
+    </div>
+    <!-- <script type="text/javascript" src="js/libs/gsap/TweenMax.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
+    <script>
+        document.getElementById('cta').addEventListener('click', function() {
+           //TweenMax.to(class, duration, css-property(ies)) 
+           TweenMax.to('.panel', 1.5, {scaleY: 1, height: '100vh', ease: "elastic.out(1, 0.3)"}) 
+           TweenMax.to('.img', 1, {opacity: 1, y: 0, delay: 1}) 
+           TweenMax.to('.text', 1, {opacity: 1, y: 10, delay: 1.4}) 
+           TweenMax.to('.box', 3, {opacity: 1, scale: 1, ease: "elastic.out(1, 0.3)"}) 
+        })
+    </script>
+</body>
+</html>
